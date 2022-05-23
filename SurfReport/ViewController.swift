@@ -10,10 +10,29 @@ import UIKit
 class ViewController: UIViewController {
     
     let tableView = UITableView()
-    let regionSet = Region.regionSet
+    
+    var steamerLane = SurfSpot(spotName: "Steamer Lane")
+    var threeMile = SurfSpot(spotName: "Three Mile")
+    var swamis = SurfSpot(spotName: "Swamis")
+    var oceanBeach = SurfSpot(spotName: "Ocean Beach")
+    var imperialBeach = SurfSpot(spotName: "Imperial Beach")
+    var pointLoma = SurfSpot(spotName: "Point Loma")
+    var sunsetCliffs = SurfSpot(spotName: "Sunset Cliffs")
+    var californiaNorth = Region(name: "California - North")
+    var californiaSouth = Region(name: "California - South")
+    
+    var regionSet = [Region]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        californiaSouth.surfSpots += [imperialBeach,
+                                      pointLoma,
+                                      sunsetCliffs,
+                                      swamis,
+                                      oceanBeach]
+        californiaNorth.surfSpots += [steamerLane,
+                                      threeMile]
+        regionSet += [californiaNorth, californiaSouth]
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
