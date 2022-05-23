@@ -10,13 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     let tableView = UITableView()
+    let searchController = UISearchController(searchResultsController: nil)
     let regionSet = Region.regionSet
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Surf Reports"
         view.addSubview(tableView)
+//        tableView.refreshControl = UIRefreshControl()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
