@@ -50,8 +50,6 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let largeConfiguration = UIImage.SymbolConfiguration(scale: .large)
         cell.imageView?.image = UIImage(systemName: "info.circle", withConfiguration: largeConfiguration)
-//        cell.imageView?.image = UIImage(systemName: symbolSet[indexPath.section].iconName?[indexPath.row] ?? "",
-//                                        withConfiguration: largeConfiguration)
         cell.textLabel?.text = regionSet[indexPath.section].surfSpots[indexPath.row].spotName
         return cell
     }
