@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SpotViewController: UIViewController {
     
     let tableView = UITableView()
     let searchController = UISearchController(searchResultsController: nil)
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 
-extension ViewController: UITableViewDataSource {
+extension SpotViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         regionSet.count
     }
@@ -57,7 +57,7 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension ViewController: UITableViewDelegate {
+extension SpotViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
