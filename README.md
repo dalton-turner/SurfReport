@@ -4,6 +4,10 @@
 
 This is a personal project to learn Swift and UIKit by creating a prototype app.
 
+<p align="center">
+  <img src="https://github.com/dalton-turner/SurfReport/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2013%20-%202022-06-29%20at%2011.50.29.png" />
+</p>
+
 ## Goals
 
 The primary goals of this project are:
