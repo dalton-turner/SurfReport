@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2A6475286CB9D40006471B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6474286CB9D40006471B /* LoginViewController.swift */; };
+		5C2A6477286CB9E10006471B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2A6476286CB9E10006471B /* LoginView.swift */; };
 		5C755CC62836AEAA00768C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CC52836AEAA00768C92 /* AppDelegate.swift */; };
-		5C755CCA2836AEAA00768C92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CC92836AEAA00768C92 /* ViewController.swift */; };
+		5C755CCA2836AEAA00768C92 /* SpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CC92836AEAA00768C92 /* SpotViewController.swift */; };
 		5C755CCF2836AEAB00768C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C755CCE2836AEAB00768C92 /* Assets.xcassets */; };
 		5C755CD22836AEAB00768C92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C755CD02836AEAB00768C92 /* LaunchScreen.storyboard */; };
-		5C755CDD2836AEAB00768C92 /* SurfReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CDC2836AEAB00768C92 /* SurfReportTests.swift */; };
-		5C755CE72836AEAB00768C92 /* SurfReportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CE62836AEAB00768C92 /* SurfReportUITests.swift */; };
-		5C755CE92836AEAB00768C92 /* SurfReportUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CE82836AEAB00768C92 /* SurfReportUITestsLaunchTests.swift */; };
 		5C755CF62836AF2400768C92 /* SpotsAndRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CF52836AF2400768C92 /* SpotsAndRegions.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,17 +34,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C2A6474286CB9D40006471B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5C2A6476286CB9E10006471B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5C755CC22836AEAA00768C92 /* SurfReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C755CC52836AEAA00768C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C755CC92836AEAA00768C92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C755CC92836AEAA00768C92 /* SpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotViewController.swift; sourceTree = "<group>"; };
 		5C755CCE2836AEAB00768C92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C755CD12836AEAB00768C92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C755CD32836AEAB00768C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C755CD82836AEAB00768C92 /* SurfReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C755CDC2836AEAB00768C92 /* SurfReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfReportTests.swift; sourceTree = "<group>"; };
 		5C755CE22836AEAB00768C92 /* SurfReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C755CE62836AEAB00768C92 /* SurfReportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfReportUITests.swift; sourceTree = "<group>"; };
-		5C755CE82836AEAB00768C92 /* SurfReportUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfReportUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5C755CF52836AF2400768C92 /* SpotsAndRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsAndRegions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,12 +72,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C2A6472286CB9A60006471B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5C2A6474286CB9D40006471B /* LoginViewController.swift */,
+				5C2A6476286CB9E10006471B /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5C2A647C286CD3680006471B /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				5C755CCE2836AEAB00768C92 /* Assets.xcassets */,
+				5C755CD02836AEAB00768C92 /* LaunchScreen.storyboard */,
+				5C755CD32836AEAB00768C92 /* Info.plist */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
 		5C755CB92836AEAA00768C92 = {
 			isa = PBXGroup;
 			children = (
 				5C755CC42836AEAA00768C92 /* SurfReport */,
-				5C755CDB2836AEAB00768C92 /* SurfReportTests */,
-				5C755CE52836AEAB00768C92 /* SurfReportUITests */,
 				5C755CC32836AEAA00768C92 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,31 +112,13 @@
 		5C755CC42836AEAA00768C92 /* SurfReport */ = {
 			isa = PBXGroup;
 			children = (
+				5C2A647C286CD3680006471B /* Files */,
+				5C2A6472286CB9A60006471B /* Login */,
 				5C9C4E97283C0D480034CB40 /* Models */,
 				5C755CC52836AEAA00768C92 /* AppDelegate.swift */,
-				5C755CC92836AEAA00768C92 /* ViewController.swift */,
-				5C755CCE2836AEAB00768C92 /* Assets.xcassets */,
-				5C755CD02836AEAB00768C92 /* LaunchScreen.storyboard */,
-				5C755CD32836AEAB00768C92 /* Info.plist */,
+				5C755CC92836AEAA00768C92 /* SpotViewController.swift */,
 			);
 			path = SurfReport;
-			sourceTree = "<group>";
-		};
-		5C755CDB2836AEAB00768C92 /* SurfReportTests */ = {
-			isa = PBXGroup;
-			children = (
-				5C755CDC2836AEAB00768C92 /* SurfReportTests.swift */,
-			);
-			path = SurfReportTests;
-			sourceTree = "<group>";
-		};
-		5C755CE52836AEAB00768C92 /* SurfReportUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5C755CE62836AEAB00768C92 /* SurfReportUITests.swift */,
-				5C755CE82836AEAB00768C92 /* SurfReportUITestsLaunchTests.swift */,
-			);
-			path = SurfReportUITests;
 			sourceTree = "<group>";
 		};
 		5C9C4E97283C0D480034CB40 /* Models */ = {
@@ -262,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C755CCA2836AEAA00768C92 /* ViewController.swift in Sources */,
+				5C2A6475286CB9D40006471B /* LoginViewController.swift in Sources */,
+				5C755CCA2836AEAA00768C92 /* SpotViewController.swift in Sources */,
 				5C755CC62836AEAA00768C92 /* AppDelegate.swift in Sources */,
+				5C2A6477286CB9E10006471B /* LoginView.swift in Sources */,
 				5C755CF62836AF2400768C92 /* SpotsAndRegions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C755CDD2836AEAB00768C92 /* SurfReportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C755CE92836AEAB00768C92 /* SurfReportUITestsLaunchTests.swift in Sources */,
-				5C755CE72836AEAB00768C92 /* SurfReportUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
