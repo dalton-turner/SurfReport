@@ -14,6 +14,10 @@
 		5C755CCF2836AEAB00768C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C755CCE2836AEAB00768C92 /* Assets.xcassets */; };
 		5C755CD22836AEAB00768C92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C755CD02836AEAB00768C92 /* LaunchScreen.storyboard */; };
 		5C755CF62836AF2400768C92 /* SpotsAndRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C755CF52836AF2400768C92 /* SpotsAndRegions.swift */; };
+		5CEE16A2287794D200097FC7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A1287794D200097FC7 /* MainViewController.swift */; };
+		5CEE16A4287799B100097FC7 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A3287799B100097FC7 /* UIViewController+Utils.swift */; };
+		5CEE16A72877A1B500097FC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A62877A1B500097FC7 /* MapViewController.swift */; };
+		5CEE16A92877A6A400097FC7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A82877A6A400097FC7 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		5C755CD82836AEAB00768C92 /* SurfReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C755CE22836AEAB00768C92 /* SurfReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurfReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C755CF52836AF2400768C92 /* SpotsAndRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsAndRegions.swift; sourceTree = "<group>"; };
+		5CEE16A1287794D200097FC7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5CEE16A3287799B100097FC7 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		5CEE16A62877A1B500097FC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5CEE16A82877A6A400097FC7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +120,12 @@
 		5C755CC42836AEAA00768C92 /* SurfReport */ = {
 			isa = PBXGroup;
 			children = (
-				5C2A647C286CD3680006471B /* Files */,
-				5C2A6472286CB9A60006471B /* Login */,
-				5C9C4E97283C0D480034CB40 /* Models */,
 				5C755CC52836AEAA00768C92 /* AppDelegate.swift */,
-				5C755CC92836AEAA00768C92 /* SpotViewController.swift */,
+				5C2A6472286CB9A60006471B /* Login */,
+				5CEE16A02877943700097FC7 /* MainApp */,
+				5C9C4E97283C0D480034CB40 /* Models */,
+				5CEE16A528779B2600097FC7 /* Utils */,
+				5C2A647C286CD3680006471B /* Files */,
 			);
 			path = SurfReport;
 			sourceTree = "<group>";
@@ -127,6 +136,25 @@
 				5C755CF52836AF2400768C92 /* SpotsAndRegions.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5CEE16A02877943700097FC7 /* MainApp */ = {
+			isa = PBXGroup;
+			children = (
+				5CEE16A1287794D200097FC7 /* MainViewController.swift */,
+				5C755CC92836AEAA00768C92 /* SpotViewController.swift */,
+				5CEE16A62877A1B500097FC7 /* MapViewController.swift */,
+				5CEE16A82877A6A400097FC7 /* AccountViewController.swift */,
+			);
+			path = MainApp;
+			sourceTree = "<group>";
+		};
+		5CEE16A528779B2600097FC7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5CEE16A3287799B100097FC7 /* UIViewController+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +289,13 @@
 			files = (
 				5C2A6475286CB9D40006471B /* LoginViewController.swift in Sources */,
 				5C755CCA2836AEAA00768C92 /* SpotViewController.swift in Sources */,
+				5CEE16A4287799B100097FC7 /* UIViewController+Utils.swift in Sources */,
 				5C755CC62836AEAA00768C92 /* AppDelegate.swift in Sources */,
+				5CEE16A2287794D200097FC7 /* MainViewController.swift in Sources */,
 				5C2A6477286CB9E10006471B /* LoginView.swift in Sources */,
 				5C755CF62836AF2400768C92 /* SpotsAndRegions.swift in Sources */,
+				5CEE16A72877A1B500097FC7 /* MapViewController.swift in Sources */,
+				5CEE16A92877A6A400097FC7 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
