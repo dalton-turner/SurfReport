@@ -1,25 +1,23 @@
 //
-//  ViewController.swift
+//  AccountViewController.swift
 //  SurfReport
 //
-//  Created by Dalton Turner on 5/19/22.
+//  Created by Dalton Turner on 7/7/22.
 //
 
+import Foundation
 import UIKit
 
-class SpotViewController: UIViewController {
+class AccountViewController: UIViewController {
     
     let tableView = UITableView()
-    let searchController = UISearchController(searchResultsController: nil)
     let regionSet = Region.regionSet
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.searchController = searchController
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Surf Reports"
+        self.title = "Account"
         view.addSubview(tableView)
-//        tableView.refreshControl = UIRefreshControl()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
@@ -31,9 +29,10 @@ class SpotViewController: UIViewController {
     }
 }
 
+
 // MARK: - UITableViewDataSource
 
-extension SpotViewController: UITableViewDataSource {
+extension AccountViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         regionSet.count
     }
@@ -57,7 +56,7 @@ extension SpotViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension SpotViewController: UITableViewDelegate {
+extension AccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
