@@ -9,7 +9,11 @@ import UIKit
 
 class SpotViewController: UIViewController {
     
-    let tableView = UITableView()
+    private let tableView: UITableView = {
+        let table = UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return table
+    }()
     let regionSet = Region.regionSet
 
     override func viewDidLoad() {
@@ -17,7 +21,6 @@ class SpotViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Surf Reports"
         view.addSubview(tableView)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -57,5 +60,8 @@ extension SpotViewController: UITableViewDataSource {
 extension SpotViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let spotDetailViewController = SpotDetailViewController()
+        navigationController?.pushViewController(spotDetailViewController, animated: true)
     }
 }

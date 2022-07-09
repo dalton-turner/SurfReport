@@ -7,46 +7,53 @@
 
 import Foundation
 
-public class SurfSpot {
+public struct SurfSpot {
     var spotName: String
-     
-    init(spotName: String) {
-        self.spotName = spotName
-   }
+    var latitude: Double
+    var longitude: Double
 }
 
-public class Region {
+public struct Region {
     var name: String
     var surfSpots = [SurfSpot]()
-
-    init(name: String, surfSpots: [SurfSpot]) {
-        self.name = name
-        self.surfSpots = surfSpots
-    }
 }
 
 #if DEBUG
 extension SurfSpot {
     static var californiaSouthSampleData = [
-        SurfSpot(spotName: "Oceanside"),
-        SurfSpot(spotName: "Oceanside Pier"),
-        SurfSpot(spotName: "Grandview"),
-        SurfSpot(spotName: "Terra Mar"),
-        SurfSpot(spotName: "Swamis"),
-        SurfSpot(spotName: "Ocean Beach"),
-        SurfSpot(spotName: "Sunset Cliffs"),
-        SurfSpot(spotName: "Imperial Beach"),
-        SurfSpot(spotName: "Point Loma")
+        SurfSpot(spotName: "Grandview",
+                 latitude: 33.076475,
+                 longitude: -117.310550),
+        SurfSpot(spotName: "Swamis",
+                 latitude: 33.034147,
+                 longitude: -117.292539),
+        SurfSpot(spotName: "Ocean Beach",
+                 latitude: 32.755602,
+                 longitude: -117.253075),
+        SurfSpot(spotName: "Sunset Cliffs",
+                 latitude: 32.719109,
+                 longitude: -117.258046),
+        SurfSpot(spotName: "Point Loma",
+                 latitude: 32.668589,
+                 longitude: -117.248338)
     ]
 
     static var californiaNorthSampleData = [
-        SurfSpot(spotName: "Steamer Lane"),
-        SurfSpot(spotName: "Three Mile"),
-        SurfSpot(spotName: "Pacifica Pier"),
-        SurfSpot(spotName: "Pacifica"),
-        SurfSpot(spotName: "Linda Mar"),
-        SurfSpot(spotName: "Montara State Beach"),
-        SurfSpot(spotName: "Mavericks")
+        SurfSpot(spotName: "Steamer Lane",
+                 latitude: 36.951630,
+                 longitude: -122.025644),
+        SurfSpot(spotName: "Three Mile",
+                 latitude:36.961086,
+                 longitude: -122.113302),
+        SurfSpot(spotName: "Pacifica",
+                 latitude: 37.598580,
+                 longitude: -122.504155),
+        SurfSpot(spotName: "Montara State Beach",
+                 latitude:37.546648,
+                 longitude: -122.516429),
+        SurfSpot(spotName: "Mavericks",
+                 latitude:37.491619,
+                 longitude: -122.499176)
     ]
 }
 
