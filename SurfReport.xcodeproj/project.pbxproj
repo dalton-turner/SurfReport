@@ -18,6 +18,8 @@
 		5CEE16A4287799B100097FC7 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A3287799B100097FC7 /* UIViewController+Utils.swift */; };
 		5CEE16A72877A1B500097FC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A62877A1B500097FC7 /* MapViewController.swift */; };
 		5CEE16A92877A6A400097FC7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A82877A6A400097FC7 /* AccountViewController.swift */; };
+		5CFD5FFD2878F00700E08B75 /* MKMapView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD5FFC2878F00700E08B75 /* MKMapView+Utils.swift */; };
+		5CFD5FFF2878F7AE00E08B75 /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD5FFE2878F7AE00E08B75 /* SpotDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		5CEE16A3287799B100097FC7 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		5CEE16A62877A1B500097FC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5CEE16A82877A6A400097FC7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		5CFD5FFC2878F00700E08B75 /* MKMapView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Utils.swift"; sourceTree = "<group>"; };
+		5CFD5FFE2878F7AE00E08B75 /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				5C755CC92836AEAA00768C92 /* SpotViewController.swift */,
 				5CEE16A62877A1B500097FC7 /* MapViewController.swift */,
 				5CEE16A82877A6A400097FC7 /* AccountViewController.swift */,
+				5CFD5FFE2878F7AE00E08B75 /* SpotDetailViewController.swift */,
 			);
 			path = MainApp;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				5CEE16A3287799B100097FC7 /* UIViewController+Utils.swift */,
+				5CFD5FFC2878F00700E08B75 /* MKMapView+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -291,7 +297,9 @@
 				5C755CCA2836AEAA00768C92 /* SpotViewController.swift in Sources */,
 				5CEE16A4287799B100097FC7 /* UIViewController+Utils.swift in Sources */,
 				5C755CC62836AEAA00768C92 /* AppDelegate.swift in Sources */,
+				5CFD5FFF2878F7AE00E08B75 /* SpotDetailViewController.swift in Sources */,
 				5CEE16A2287794D200097FC7 /* MainViewController.swift in Sources */,
+				5CFD5FFD2878F00700E08B75 /* MKMapView+Utils.swift in Sources */,
 				5C2A6477286CB9E10006471B /* LoginView.swift in Sources */,
 				5C755CF62836AF2400768C92 /* SpotsAndRegions.swift in Sources */,
 				5CEE16A72877A1B500097FC7 /* MapViewController.swift in Sources */,
