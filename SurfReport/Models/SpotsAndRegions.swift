@@ -6,11 +6,11 @@
 //
 
 import Foundation
+import MapKit
 
 public struct SurfSpot {
     var spotName: String
-    var latitude: Double
-    var longitude: Double
+    var location: CLLocation
 }
 
 public struct Region {
@@ -22,38 +22,38 @@ public struct Region {
 extension SurfSpot {
     static var californiaSouthSampleData = [
         SurfSpot(spotName: "Grandview",
-                 latitude: 33.076475,
-                 longitude: -117.310550),
+                 location: CLLocation(latitude: 33.076475, longitude: -117.310550)
+                ),
         SurfSpot(spotName: "Swamis",
-                 latitude: 33.034147,
-                 longitude: -117.292539),
+                 location: CLLocation(latitude: 33.034147, longitude: -117.292539)
+                ),
         SurfSpot(spotName: "Ocean Beach",
-                 latitude: 32.755602,
-                 longitude: -117.253075),
+                 location: CLLocation(latitude: 32.755602, longitude: -117.253075)
+                ),
         SurfSpot(spotName: "Sunset Cliffs",
-                 latitude: 32.719109,
-                 longitude: -117.258046),
+                 location: CLLocation(latitude: 32.719109, longitude: -117.258046)
+                ),
         SurfSpot(spotName: "Point Loma",
-                 latitude: 32.668589,
-                 longitude: -117.248338)
+                 location: CLLocation(latitude: 32.668589, longitude: -117.248338)
+                ),
     ]
 
     static var californiaNorthSampleData = [
         SurfSpot(spotName: "Steamer Lane",
-                 latitude: 36.951630,
-                 longitude: -122.025644),
+                 location: CLLocation(latitude: 36.951630, longitude: -122.025644)
+                ),
         SurfSpot(spotName: "Three Mile",
-                 latitude:36.961086,
-                 longitude: -122.113302),
+                 location: CLLocation(latitude: 36.961086, longitude: -122.113302)
+                ),
         SurfSpot(spotName: "Pacifica",
-                 latitude: 37.598580,
-                 longitude: -122.504155),
+                 location: CLLocation(latitude: 37.598580, longitude: -122.504155)
+                ),
         SurfSpot(spotName: "Montara State Beach",
-                 latitude:37.546648,
-                 longitude: -122.516429),
+                 location: CLLocation(latitude: 37.546648, longitude: -122.516429)
+                ),
         SurfSpot(spotName: "Mavericks",
-                 latitude:37.491619,
-                 longitude: -122.499176)
+                 location: CLLocation(latitude: 37.491619, longitude: -122.499176)
+                ),
     ]
 }
 

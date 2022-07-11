@@ -14,11 +14,12 @@ class SpotViewController: UIViewController {
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()
-    let regionSet = Region.regionSet
+    private let regionSet = Region.regionSet
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.largeTitleDisplayMode = .always
         self.title = "Surf Reports"
         view.addSubview(tableView)
         tableView.delegate = self
@@ -48,9 +49,11 @@ extension SpotViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = regionSet[indexPath.section].surfSpots[indexPath.row].spotName
         let largeConfiguration = UIImage.SymbolConfiguration(scale: .large)
-        cell.imageView?.image = UIImage(systemName: "info.circle", withConfiguration: largeConfiguration)
-        cell.textLabel?.text = regionSet[indexPath.section].surfSpots[indexPath.row].spotName
+        content.image = UIImage(systemName: "info.circle", withConfiguration: largeConfiguration)
+        cell.contentConfiguration = content
         return cell
     }
 }
@@ -61,7 +64,15 @@ extension SpotViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let spotDetailViewController = SpotDetailViewController()
-        navigationController?.pushViewController(spotDetailViewController, animated: true)
+        let spot = regionSet[indexPath.section].surfSpots[indexPath.row]
+        let latString = "Latitude: \(spot.location.coordinate.latitude)"
+        let lonString = "Longitude: \(spot.location.coordinate.longitude)"
+        
+        let spotDetails = SpotDetailsViewController(items: [
+            latString,
+            lonString
+        ])
+        spotDetails.title = spot.spotName
+        navigationController?.pushViewController(spotDetails, animated: true)
     }
 }

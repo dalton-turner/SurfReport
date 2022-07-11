@@ -10,31 +10,29 @@ import UIKit
 
 class MapViewController: UIViewController {
     
-    let mapView : MKMapView = {
-        let map = MKMapView()
-        map.overrideUserInterfaceStyle = .dark
-        return map
-    }()
+    let mapView = MKMapView()
+    private let regionSet = Region.regionSet
     
     // Set initial location to be near Fresno to show all of California
-    let initialLocation = CLLocation(latitude: 36.675459, longitude:  -119.811238)
+    private let initialLocation = CLLocation(latitude: 36.675459, longitude:  -119.811238)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
-        
-        let spotCoordinates = generateCoordinates(regions: Region.regionSet)
-        addAnnotations(coords: spotCoordinates)
     }
     
     private func style() {
         mapView.translatesAutoresizingMaskIntoConstraints = false
         mapView.centerToLocation(initialLocation)
+        
+        addAnnotation(regions: Region.regionSet)
     }
     
     private func layout() {
         view.addSubview(mapView)
+        
+        mapView.delegate = self
         
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
@@ -43,25 +41,44 @@ class MapViewController: UIViewController {
             mapView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
         ])
     }
-    
-    private func generateCoordinates(regions: [Region]) -> [CLLocation] {
-        var coordinates = [CLLocation]()
+
+    private func addAnnotation(regions: [Region]){
         for region in regions {
             for spot in region.surfSpots {
-                let coordinate = CLLocation(latitude: spot.latitude, longitude: spot.longitude)
-                coordinates.append(coordinate)
+                // Create spot coordinates to assign to map annotations
+                let spotCoordinates = CLLocationCoordinate2D(
+                    latitude: spot.location.coordinate.latitude,
+                    longitude: spot.location.coordinate.longitude
+                )
+                
+                // Set up annotations with coordinates and spot names
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = spotCoordinates
+                annotation.title = spot.spotName
+
+                // Add new annotation to the map view
+                mapView.addAnnotation(annotation)
             }
         }
-        return coordinates
     }
-    
-    private func addAnnotations(coords: [CLLocation]){
-        for coord in coords {
-            let CLLCoordType = CLLocationCoordinate2D(latitude: coord.coordinate.latitude,
-                                                      longitude: coord.coordinate.longitude)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLCoordType
-            mapView.addAnnotation(annotation)
+
+}
+
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation,
+              let spotName = annotation.title else {
+            return
         }
+        
+        let latString = "Latitude: \(annotation.coordinate.latitude)"
+        let lonString = "Longitude: \(annotation.coordinate.longitude)"
+
+        let spotDetails = SpotDetailsViewController(items: [
+            latString,
+            lonString
+        ])
+        spotDetails.title = spotName
+        navigationController?.pushViewController(spotDetails, animated: true)
     }
 }
