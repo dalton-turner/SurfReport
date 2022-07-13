@@ -1,8 +1,8 @@
 //
-//  SpotDetailsViewController.swift
+//  TestSpotDetailsViewController.swift
 //  SurfReport
 //
-//  Created by Dalton Turner on 7/9/22.
+//  Created by Dalton Turner on 7/11/22.
 //
 
 import UIKit
@@ -15,6 +15,9 @@ class SpotDetailsViewController: UIViewController {
         return table
     }()
     
+    private let regionSet = Region.regionSet
+    let surfData = ServiceManager.shared.provideParsedData(for: "SwamisSampleData2022-07-11")
+
     private var items: [Any]
     
     init(items: [Any]) {
@@ -44,14 +47,24 @@ class SpotDetailsViewController: UIViewController {
 // MARK: - UITableViewDataSource
 
 extension SpotDetailsViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        surfData.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        surfData[section].sectionName
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        surfData[section].sectionObjects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = items[indexPath.row] as? String ?? ""
+
+        content.text = surfData[indexPath.section].sectionObjects[indexPath.row]
+        
         cell.contentConfiguration = content
         return cell
     }
@@ -64,3 +77,4 @@ extension SpotDetailsViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+

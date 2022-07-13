@@ -19,7 +19,10 @@
 		5CEE16A72877A1B500097FC7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A62877A1B500097FC7 /* MapViewController.swift */; };
 		5CEE16A92877A6A400097FC7 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE16A82877A6A400097FC7 /* AccountViewController.swift */; };
 		5CFD5FFD2878F00700E08B75 /* MKMapView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD5FFC2878F00700E08B75 /* MKMapView+Utils.swift */; };
-		5CFD6001287A2DAA00E08B75 /* SpotDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD6000287A2DAA00E08B75 /* SpotDetailsViewController.swift */; };
+		5CFD6004287CCC1300E08B75 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD6003287CCC1300E08B75 /* DataModel.swift */; };
+		5CFD6008287CCD4800E08B75 /* SwamisSampleData2022-07-11.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CFD6007287CCD4800E08B75 /* SwamisSampleData2022-07-11.json */; };
+		5CFD600A287CE11F00E08B75 /* SpotDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD6009287CE11F00E08B75 /* SpotDetailsViewController.swift */; };
+		5CFD600C287DE28D00E08B75 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD600B287DE28D00E08B75 /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +59,10 @@
 		5CEE16A62877A1B500097FC7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5CEE16A82877A6A400097FC7 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		5CFD5FFC2878F00700E08B75 /* MKMapView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Utils.swift"; sourceTree = "<group>"; };
-		5CFD6000287A2DAA00E08B75 /* SpotDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailsViewController.swift; sourceTree = "<group>"; };
+		5CFD6003287CCC1300E08B75 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		5CFD6007287CCD4800E08B75 /* SwamisSampleData2022-07-11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "SwamisSampleData2022-07-11.json"; sourceTree = "<group>"; };
+		5CFD6009287CE11F00E08B75 /* SpotDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailsViewController.swift; sourceTree = "<group>"; };
+		5CFD600B287DE28D00E08B75 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 				5C2A6472286CB9A60006471B /* Login */,
 				5CEE16A02877943700097FC7 /* MainApp */,
 				5C9C4E97283C0D480034CB40 /* Models */,
+				5CFD6002287CCBE900E08B75 /* Networking */,
 				5CEE16A528779B2600097FC7 /* Utils */,
 				5C2A647C286CD3680006471B /* Files */,
 			);
@@ -149,7 +156,7 @@
 				5CEE16A1287794D200097FC7 /* MainViewController.swift */,
 				5CEE16A62877A1B500097FC7 /* MapViewController.swift */,
 				5C755CC92836AEAA00768C92 /* SpotViewController.swift */,
-				5CFD6000287A2DAA00E08B75 /* SpotDetailsViewController.swift */,
+				5CFD6009287CE11F00E08B75 /* SpotDetailsViewController.swift */,
 			);
 			path = MainApp;
 			sourceTree = "<group>";
@@ -161,6 +168,16 @@
 				5CFD5FFC2878F00700E08B75 /* MKMapView+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5CFD6002287CCBE900E08B75 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5CFD6003287CCC1300E08B75 /* DataModel.swift */,
+				5CFD600B287DE28D00E08B75 /* ServiceManager.swift */,
+				5CFD6007287CCD4800E08B75 /* SwamisSampleData2022-07-11.json */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFD6008287CCD4800E08B75 /* SwamisSampleData2022-07-11.json in Resources */,
 				5C755CD22836AEAB00768C92 /* LaunchScreen.storyboard in Resources */,
 				5C755CCF2836AEAB00768C92 /* Assets.xcassets in Resources */,
 			);
@@ -294,16 +312,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2A6475286CB9D40006471B /* LoginViewController.swift in Sources */,
-				5CFD6001287A2DAA00E08B75 /* SpotDetailsViewController.swift in Sources */,
 				5C755CCA2836AEAA00768C92 /* SpotViewController.swift in Sources */,
 				5CEE16A4287799B100097FC7 /* UIViewController+Utils.swift in Sources */,
 				5C755CC62836AEAA00768C92 /* AppDelegate.swift in Sources */,
+				5CFD600C287DE28D00E08B75 /* ServiceManager.swift in Sources */,
+				5CFD6004287CCC1300E08B75 /* DataModel.swift in Sources */,
 				5CEE16A2287794D200097FC7 /* MainViewController.swift in Sources */,
 				5CFD5FFD2878F00700E08B75 /* MKMapView+Utils.swift in Sources */,
 				5C2A6477286CB9E10006471B /* LoginView.swift in Sources */,
 				5C755CF62836AF2400768C92 /* SpotsAndRegions.swift in Sources */,
 				5CEE16A72877A1B500097FC7 /* MapViewController.swift in Sources */,
 				5CEE16A92877A6A400097FC7 /* AccountViewController.swift in Sources */,
+				5CFD600A287CE11F00E08B75 /* SpotDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

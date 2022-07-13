@@ -51,8 +51,6 @@ extension SpotViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = regionSet[indexPath.section].surfSpots[indexPath.row].spotName
-        let largeConfiguration = UIImage.SymbolConfiguration(scale: .large)
-        content.image = UIImage(systemName: "info.circle", withConfiguration: largeConfiguration)
         cell.contentConfiguration = content
         return cell
     }
@@ -67,7 +65,7 @@ extension SpotViewController: UITableViewDelegate {
         let spot = regionSet[indexPath.section].surfSpots[indexPath.row]
         let latString = "Latitude: \(spot.location.coordinate.latitude)"
         let lonString = "Longitude: \(spot.location.coordinate.longitude)"
-        
+
         let spotDetails = SpotDetailsViewController(items: [
             latString,
             lonString
