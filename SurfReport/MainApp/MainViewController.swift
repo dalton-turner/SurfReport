@@ -21,7 +21,7 @@ extension MainViewController {
     func setupViews() {
         let spotViewController = SpotViewController()
         let mapViewController = MapViewController()
-        let accountViewController = AccountViewController()
+        let accountViewController = SpotViewController()
         
         spotViewController.setTabBarImage(imageName: "mappin.and.ellipse", title: "Spots")
         mapViewController.setTabBarImage(imageName: "map.fill", title: "Map")
