@@ -24,13 +24,11 @@ So far I have:
 - Created the project in Xcode
 - Set up the project's UI without using Storyboards
 - Created dummy data to display in the UI
+- Displayed the information from the API in the app's UI
 
 ## Next Steps
 
 The next steps for this project are:
 
 - Created a network request to pull data from the API
-- Displayed the information from the API in the app's UI
 - Refine the app's UI
-- Implement error handling
-- Add more features to the app
